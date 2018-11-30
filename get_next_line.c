@@ -83,8 +83,6 @@ static void		*write_line(char *str, char **line, size_t len_str, int to_free)
 								(size_t)find_line_end(str, len_str));
 		if (BUFF_SIZE > 1)
 			next = ft_strdup(ft_memchr(str, '\n', len_str) + 1);
-		else
-			next = ft_strnew(0);
 		free((void *)str);
 		return (next);
 	}
